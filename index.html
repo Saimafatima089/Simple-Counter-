@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             background-color: #f4f6f9;
+              font-family: Arial, sans-serif;
+        }
+
+        .container{
+          background-color: #ffffff;
+          padding: 2rem;
+          border-radius: 10px;
+           box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+          height: 20vh;
+          width: 20vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           gap: 1.5rem;
+            min-width: 250px; 
+        }
+
+ h1 {
+             margin: 0;
+            font-size: 3rem;
+            color: #333333;
+        }
+
+        .btnGroup{
+            display: flex;
+            gap: 10px;
+        }
+
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+
+         #resetBtn {
+            background-color: #6c757d;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 id="countNum">0</h1>
+        <div class="btnGroup">
+        <button id="incrementBtn">+</button>
+        <button id="decrementBtn">-</button>
+        <button id="resetBtn">Reset</button>
+         </div>
+    </div>
+
+    <script>
+      const countNumber = document.getElementById("countNum");
+      const incrementBtn = document.getElementById("incrementBtn");
+      const decrementBtn = document.getElementById("decrementBtn");
+      const resetBtn = document.getElementById("resetBtn");
+
+      incrementBtn.addEventListener('click', () => {
+        countNumber.innerText++;
+      })
+      decrementBtn.addEventListener('click', () => {
+        countNumber.innerText--;
+      })
+      resetBtn.addEventListener('click', () => {
+        countNumber.innerText = 0;
+      })
+
+      
+    </script>
+</body>
+</html>
